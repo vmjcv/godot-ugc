@@ -31,7 +31,8 @@ func _process(delta):
 
 func init_nodejs_server():
 	var output = []
-	nodejs_pid = OS.execute("CMD.exe", ["/C","cd %s && npm start"%nodejs_path], false, output)
+#	nodejs_pid = OS.execute("CMD.exe", ["/C","cd %s && npm start"%nodejs_path], false, output)
+	nodejs_pid = OS.execute(nodejs_path,[], false, output)
 	print(nodejs_pid)
 	
 func login_node_server():

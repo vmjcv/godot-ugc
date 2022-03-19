@@ -122,7 +122,7 @@ margin_bottom = 24.0
 margin_right = 960.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
-text = "C:\\Users\\mjc\\Desktop\\slimegame\\slime-game-node"
+text = "C:/Users/mjc/Desktop/slimegame/nodejs.exe"
 
 [node name="NodeJSFolderButton" type="Button" parent="ScrollContainer/VBoxContainer/NodeJS/NodeJSInit/HBoxContainer"]
 margin_left = 964.0
@@ -241,11 +241,9 @@ margin_top = -191.5
 margin_right = 283.5
 margin_bottom = 191.5
 rect_min_size = Vector2( 300, 105 )
-window_title = "打开目录"
-mode = 2
+window_title = "打开文件或目录"
+mode = 3
 access = 2
-current_dir = "/Users/mjc/Documents/ugc"
-current_path = "/Users/mjc/Documents/ugc/"
 
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Platform/PlatformLogin/Login" to="." method="_on_Platform_Login_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Platform/PlatformStatus/Logout" to="." method="_on_Platform_Logout_pressed"]
@@ -256,3 +254,4 @@ current_path = "/Users/mjc/Documents/ugc/"
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Wallet/WalletStatus/Logout" to="." method="_on_Wallet_Logout_pressed"]
 [connection signal="text_changed" from="ScrollContainer/VBoxContainer/Token/Token" to="." method="_on_Token_text_changed"]
 [connection signal="dir_selected" from="FileDialog" to="." method="_on_Nodejs_FileDialog_dir_selected"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]

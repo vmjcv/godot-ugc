@@ -177,9 +177,13 @@ func _on_NodeJSFolderButton_pressed():
 func _on_Nodejs_FileDialog_dir_selected(dir):
 	nodejs_folder_label.text = dir
 
+
+func _on_FileDialog_file_selected(path):
+	nodejs_folder_label.text = path
+
 func _on_nodejs_Connect_pressed():
 	UGC.nodejs_client.nodejs_path = nodejs_folder_label.text
-#	UGC.nodejs_client.init_nodejs_server()
+	UGC.nodejs_client.init_nodejs_server()
 	UGC.nodejs_client.login_node_server()
 
 func _on_nodejs_Logout_pressed():
@@ -203,6 +207,8 @@ func _ready():
 	platform_init()
 	wallet_init()
 	nodejs_init()
+
+
 
 
 
