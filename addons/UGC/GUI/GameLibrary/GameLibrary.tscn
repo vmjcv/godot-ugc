@@ -34,7 +34,6 @@ size_flags_vertical = 1
 margin_top = 128.0
 margin_right = 300.0
 margin_bottom = 600.0
-game_summary_scene = null
 
 [node name="GameInfo" parent="ScrollContainer/HBoxContainer" instance=ExtResource( 3 )]
 visible = false

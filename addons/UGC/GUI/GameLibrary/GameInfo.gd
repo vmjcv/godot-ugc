@@ -31,7 +31,6 @@ onready var game_total_entrance_fee_label = $"HBoxContainer/MarginContainer2/VBo
 onready var game_total_entrance_fee_container = $"HBoxContainer/MarginContainer2/VBoxContainer2/Control/MarginContainer/VBoxContainer/TotalEntranceFeeContainer"
 
 
-export(PackedScene) var game_role_scene
 export(PackedScene) var game_role_desc
 
 func set_game_name(val):
