@@ -1,6 +1,6 @@
 tool
 extends Reference
-var fileos = preload("res://addons/UGC/Utils/Data/FileOS.gd").new()
+var fileos = load("res://addons/UGC/Utils/Data/FileOS.gd").new()
 
 
 func ugc_package():
@@ -15,8 +15,8 @@ func create_pck_begin():
 	var folder = UGC.data_manger.data_constant.ugc_game_path
 	var file_name_list = fileos.scan(folder)
 	var addons_folder = "res://addons"
-	var addon_name_list = fileos.scan(folder)
-	var channel = fileos.modify_export_presets(PoolStringArray(file_name_list+addon_name_list),"addons/UGC/*")
+	var addon_name_list = fileos.scan(addons_folder)
+	var channel = fileos.modify_export_presets(PoolStringArray(file_name_list+addon_name_list),"addons/UGC/*","")
 	var output = []
 	var pck_folder = UGC.data_manger.data_constant.ugc_temp_globalize_path+"/UGCGame.pck"
 	var array = ["--export-pack", str(channel),pck_folder]
@@ -33,7 +33,12 @@ func _create_input():
 	var input_folder = ConfigFile.new()
 	input_folder.load(UGC.data_manger.data_constant.ugc_game_input_path)
 	input_folder.clear()
-	for action in InputMap.get_actions():
-		input_folder.set_value("Input",action,InputMap.get_action_list(action))
-		input_folder.set_value("Deadzone",action,InputMap.action_get_deadzone(action))
+	
+	var project_folder = ConfigFile.new()
+	project_folder.load("res://project.godot")
+#	for action in InputMap.get_actions():# 这个读的内容不对，读project.godot的内容把
+	for action in project_folder.get_section_keys("input"):
+		var data = project_folder.get_value("input",action)
+		input_folder.set_value("Input",action,data.events)
+		input_folder.set_value("Deadzone",action,data.deadzone)
 	input_folder.save(UGC.data_manger.data_constant.ugc_game_input_path)

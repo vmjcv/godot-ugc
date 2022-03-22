@@ -1,7 +1,7 @@
 tool
 extends Node
 
-var cid_map = preload("res://addons/UGC/Utils/Platform/CIDMap.gd").new()
+var cid_map = load("res://addons/UGC/Utils/Platform/CIDMap.gd").new()
 signal search_update
 signal detail_update
 signal search_content_update

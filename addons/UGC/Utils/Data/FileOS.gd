@@ -6,7 +6,7 @@ static func backup_export_presets():
 	var d = Directory.new()
 	d.copy(UGC.data_manger.data_constant.export_presets_cfg,UGC.data_manger.data_constant.export_presets_cfg_backup)
 
-static func modify_export_presets(export_files,exclude_filter=""):
+static func modify_export_presets(export_files,exclude_filter="",include_filter=""):
 	var presets_cfg = ConfigFile.new()
 	var err = presets_cfg.load(UGC.data_manger.data_constant.export_presets_cfg)
 	var section_name
@@ -15,8 +15,10 @@ static func modify_export_presets(export_files,exclude_filter=""):
 		if platform_name != "Windows Desktop":
 			continue
 		section_name = presets_cfg.get_value(section,"name")
+		presets_cfg.set_value(section,"export_filter","resources")
 		presets_cfg.set_value(section,"export_files",export_files)
 		presets_cfg.set_value(section,"exclude_filter",exclude_filter)
+		presets_cfg.set_value(section,"include_filter",include_filter)
 		break 
 	presets_cfg.save(UGC.data_manger.data_constant.export_presets_cfg)
 	return section_name

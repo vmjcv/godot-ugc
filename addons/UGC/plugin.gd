@@ -6,7 +6,7 @@ var dock
 func _enter_tree():
 	# Initialization of the plugin goes here.
 	# Load the dock scene and instance it.
-	dock = preload("res://addons/UGC/GUI/UGC.tscn").instance()
+	dock = load("res://addons/UGC/GUI/UGC.tscn").instance()
 	add_control_to_bottom_panel(dock,"UGC")
 	add_autoload_singleton("UGC", "res://addons/UGC/Utils/Main/UGC.tscn")
 

@@ -1,7 +1,7 @@
 tool
 extends Reference
 
-var fileos = preload("res://addons/UGC/Utils/Data/FileOS.gd").new()
+var fileos = load("res://addons/UGC/Utils/Data/FileOS.gd").new()
 
 func ugc_package(folder,metadata_dict):
 	fileos.clear_temp_path() # 清空原先的文件

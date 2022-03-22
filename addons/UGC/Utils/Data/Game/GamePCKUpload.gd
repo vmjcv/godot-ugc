@@ -1,8 +1,8 @@
 tool
 extends Reference
-var fileos = preload("res://addons/UGC/Utils/Data/FileOS.gd").new()
+var fileos = load("res://addons/UGC/Utils/Data/FileOS.gd").new()
 
-var ugc_game_pck_package = preload("res://addons/UGC/Utils/Data/Game/GamePCKPackage.gd").new()
+var ugc_game_pck_package = load("res://addons/UGC/Utils/Data/Game/GamePCKPackage.gd").new()
 
 func ugc_upload():
 	ugc_game_pck_package.ugc_package()

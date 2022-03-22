@@ -88,8 +88,6 @@ func server_call():
 	while ret:
 		data.append(ret)
 		ret = buffer.get_var()
-	print(server_call_func)
-	print(type)
 	if type and server_call_func.get(type):
 		var do_func = server_call_func[type]
 		do_func[0].call(do_func[1],data)

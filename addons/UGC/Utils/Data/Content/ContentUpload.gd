@@ -2,7 +2,7 @@ tool
 extends Reference
 
 
-var ugc_content_package = preload("res://addons/UGC/Utils/Data/Content/ContentPackage.gd").new()
+var ugc_content_package = load("res://addons/UGC/Utils/Data/Content/ContentPackage.gd").new()
 
 func ugc_upload(args):
 	print(args)

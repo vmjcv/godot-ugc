@@ -2,7 +2,7 @@ tool
 extends Reference
 
 
-var ugc_content_pck_package = preload("res://addons/UGC/Utils/Data/Content/ContentPCKPackage.gd").new()
+var ugc_content_pck_package = load("res://addons/UGC/Utils/Data/Content/ContentPCKPackage.gd").new()
 
 
 func ugc_upload(args):
