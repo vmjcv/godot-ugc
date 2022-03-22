@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://addons/UGC/Utils/Nodejs/Client.gd" type="Script" id=1]
 [ext_resource path="res://addons/UGC/Utils/Main/UGC.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://addons/UGC/Utils/Game/Utils.gd" type="Script" id=11]
 [ext_resource path="res://addons/UGC/Utils/Game/InputMap.gd" type="Script" id=12]
 [ext_resource path="res://addons/UGC/Utils/Game/Main.gd" type="Script" id=13]
+[ext_resource path="res://addons/UGC/Utils/Game/Classname.gd" type="Script" id=14]
 
 [node name="UGC" type="Node"]
 script = ExtResource( 2 )
@@ -52,3 +53,6 @@ script = ExtResource( 12 )
 
 [node name="Main" type="Node" parent="."]
 script = ExtResource( 13 )
+
+[node name="Classname" type="Node" parent="."]
+script = ExtResource( 14 )

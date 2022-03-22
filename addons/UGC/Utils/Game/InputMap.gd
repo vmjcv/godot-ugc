@@ -7,7 +7,8 @@ func load_input():
 	input_folder.load(UGC.data_manger.data_constant.ugc_game_input_path)
 	
 	for action in input_folder.get_section_keys("Input"):
-		InputMap.add_action(action)
+		if not InputMap.has_action(action):
+			InputMap.add_action(action)
 		var deadzone = input_folder.get_value("Deadzone",action)
 		InputMap.action_set_deadzone(action,deadzone)
 		var value = input_folder.get_value("Input",action)

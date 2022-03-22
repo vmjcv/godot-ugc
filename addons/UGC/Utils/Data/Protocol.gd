@@ -79,5 +79,7 @@ func download(res_cid,path):
 	data.append(res_cid)
 	data.append(path)
 	UGC.nodejs_client.call_server(UGC.nodejs_client.nodejs_constant.PROTOCOL.C_S_DOWNLOAD_FILE,data)
-	add_user_signal("cid-%s"%res_cid)
+	var signal_name = "cid-%s"%res_cid
+	if not has_user_signal(signal_name):
+		add_user_signal(signal_name)
 

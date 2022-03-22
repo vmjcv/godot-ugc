@@ -12,5 +12,7 @@ onready var autoload = $Autoload
 onready var load_utils = $LoadUtils
 onready var utils = $Utils
 onready var inputmap = $InputMap
+onready var main = $Main
+onready var classname = $Classname
 
 

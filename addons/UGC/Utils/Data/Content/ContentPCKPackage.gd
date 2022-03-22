@@ -13,7 +13,7 @@ func create_pck_begin(folder):
 	fileos.backup_export_presets()
 	var file_name_list = fileos.scan(folder)
 	print(file_name_list)
-	var channel = fileos.modify_export_presets(PoolStringArray(file_name_list),"addons/*")
+	var channel = fileos.modify_export_presets(PoolStringArray(file_name_list),"addons/UGC/*")
 	
 	fileos.backup_project()
 	fileos.modify_project()
@@ -26,9 +26,6 @@ func create_pck_begin(folder):
 	OS.execute(OS.get_executable_path(), args, true, output)
 	create_pck_end()
 	
-	
-	
-
 func create_pck_end():
 	fileos.restore_export_presets()
 	fileos.restore_project()

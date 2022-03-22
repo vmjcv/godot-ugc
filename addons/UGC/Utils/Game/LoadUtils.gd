@@ -1,8 +1,6 @@
 tool
 extends Node
 
-
-
 func load_tex(node,path):
 	_load_tex(node,path)
 

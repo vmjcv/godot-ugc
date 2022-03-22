@@ -14,6 +14,7 @@ func set_value(section,key,value):
 func load_value(section,key):
 	var value = config.get_value(section,key)
 	return value
+
 	
 func set_metadata(cid,value):
 	set_value(cid,"metadata",value)

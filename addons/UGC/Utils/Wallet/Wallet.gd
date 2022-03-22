@@ -50,7 +50,7 @@ func update_nft_dict():
 	for index in slime_list:
 		nft_dict[index] = {
 			"level":randi()%10,
-			"path":"res://UGCContent/bafybeihasmdf42r7fusskm5tvwfvbkwcbupx34otzilcg3x3u2gdkj72ta/header.jpg",
+			"path":"res://UGCContent/bafybeid6tmotn6jb2qergxfsp5mzw5n35b3nkaqfesllrhfjymzhc4jo2q/icon.png",
 			"data":{
 				"Defense":randi()%10,
 				"Attack":randi()%10,

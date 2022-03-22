@@ -27,10 +27,10 @@ var game_use=[
 	
 ]
 
-var content_upload = preload("res://addons/UGC/Utils/Data/Content/ContentUpload.gd").new()
-var content_download = preload("res://addons/UGC/Utils/Data/Content/ContentDownload.gd").new()
-var content_pck_upload = preload("res://addons/UGC/Utils/Data/Content/ContentPCKUpload.gd").new()
-var content_pck_download = preload("res://addons/UGC/Utils/Data/Content/ContentPCKDownload.gd").new()
+var content_upload = load("res://addons/UGC/Utils/Data/Content/ContentUpload.gd").new()
+var content_download = load("res://addons/UGC/Utils/Data/Content/ContentDownload.gd").new()
+var content_pck_upload = load("res://addons/UGC/Utils/Data/Content/ContentPCKUpload.gd").new()
+var content_pck_download = load("res://addons/UGC/Utils/Data/Content/ContentPCKDownload.gd").new()
 
-var game_pck_upload = preload("res://addons/UGC/Utils/Data/Game/GamePCKUpload.gd").new()
-var game_pck_download = preload("res://addons/UGC/Utils/Data/Game/GamePCKDownload.gd").new()
+var game_pck_upload = load("res://addons/UGC/Utils/Data/Game/GamePCKUpload.gd").new()
+var game_pck_download = load("res://addons/UGC/Utils/Data/Game/GamePCKDownload.gd").new()
