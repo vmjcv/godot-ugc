@@ -10,7 +10,10 @@ data_*/
 
 # project ignores
 test/
+UGCTemp/
 UGCContent/
 UGCContentPCK/
+UGCGame/
 UGCGamePCK/
-UGCTemp/
+backup_export_presets.cfg
+backup_project.cfg
