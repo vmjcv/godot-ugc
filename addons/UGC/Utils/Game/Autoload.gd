@@ -9,7 +9,13 @@ func add_autoload_dict(autoload_dict):
 		add_autoload(node_name,node_path)
 
 func add_autoload(node_name,node_path):
-	var node = load(node_path).new()
+	var node
+	match node_path.get_extension().to_lower():
+		"gd":
+			node = load(node_path).new()
+		"tscn":
+			node = load(node_path).instance()
+	
 	name_map[node_name] = node
 	get_tree().root.call_deferred("add_child",node)
 	
